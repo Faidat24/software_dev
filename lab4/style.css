@@ -216,7 +216,7 @@ padding: 20px;
     margin-top: 50px;
 }
 .imgbackground div, .imgbackground2 div{
-    width: 30px;
+    width: 300px;
     height: 200px;
     border: solid gray 1px;
 }
@@ -227,19 +227,20 @@ padding: 20px;
     background-image: linear-gradient(to left, red, darkblue);
 }
 .imgbackground div:nth-child(3){
-    background-image: linear-gradient (to bottom left, red, darkblue);
+    background-image: linear-gradient(to bottom left, red, darkblue);
 }
 .imgbackground2 div:nth-child(1){
     background-image: linear-gradient(to top right,red, darkblue, yellow);
 }
 .imgbackground2 div:nth-child(2){
-    background-image: linear-gradient(red, darkblue, yellow purple);
+    background-image: linear-gradient(red, darkblue, yellow, purple);
 }
 .imgbackground2 div:nth-child(3){
     background-image: linear-gradient(red 20%, darkblue 60%, yellow 30%, purple 80%);
 }
 /*hero image*/
 .heroimgcontainer{
+    position: relative;
     width: 800px;
     height: 500px;
     margin: auto;
@@ -280,3 +281,4 @@ padding: 20px;
     background-color: rgba(220, 200, 200, 0.9);
     color: crimson;
     font-weight: bolder;
+}
