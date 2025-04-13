@@ -395,6 +395,7 @@ padding: 20px;
    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3)),
    url("images/japan\ store\ front.jpg");
    display: flex;
+   flex-direction: column;
    align-items: center;
    background-position: center;
    background-repeat: no-repeat;
@@ -402,15 +403,14 @@ padding: 20px;
    position: relative;
    color: bisque;
    margin-bottom: 0 auto;
-   width: 100%;
 }
 .movie_title{
    position:absolute;
    font-size: large;
    font-weight: bolder;
    left: 50%;
-   top: 50%;
-   color: bisque;
+   top: 52%;
+   color: rgb(255, 228, 196);
    text-align: center;
    width: 100%;
    z-index: 1;
@@ -424,11 +424,11 @@ padding: 20px;
    line-height: 1.4;
 }
 .review1{
-   top: 10%;
+   top: 3%;
    left: 5px;
    font-size: small;
    color: white;
-   width: 25%;;
+   width: 70%;
 }
 .review1_text{
    font-size: small;
@@ -437,15 +437,16 @@ padding: 20px;
 .review_source{
    font-size: smaller;
    font-weight: bold;
-   margin-bottom: 20px;
+   margin-bottom: 5px;
+   margin-top: 8px;
    color: azure;
 }
 .review2{
    text-align: right;
-   top: 10%;
+   top: 25%;
    right: 5px;
    font-size: small;
-   width: 25%;
+   width: 75%;
 }
 .review2_text{
    font-size: medium;
@@ -456,7 +457,8 @@ padding: 20px;
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   width: 40%;
+   width: 95%;
+   padding-bottom: 5px;
 }
 .review3_text{
     margin: 5px 0;
