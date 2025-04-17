@@ -152,3 +152,136 @@ img{width: 100%; display: block;}
     .collapsenavbar{display: inline-block;}
     .navbars{display: none;}
 }
+/* NAVBAR */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #002B36;  
+    padding: 0.5rem 2rem;
+  }
+  .nav-logo img {
+    max-height: 50px;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+  .nav-menu a {
+    color: #F8F8F8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+  .nav-menu a:hover {
+    background-color: #00FFCC;
+    color: #00323F;
+    border-radius: 4px;
+  }
+  
+  /* INTRO SECTION */
+  .introduction {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 2rem;
+    gap: 2rem;
+  }
+  .intro-image,
+  .intro-text {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+  }
+  .intro-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .intro-text h2 {
+    margin-top: 0;
+  }
+  .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* COMMON CONTENT SECTION */
+  .content-section {
+    padding: 3rem 1rem;
+  }
+  .content-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  .african {
+    background-color: #A7D3DB;
+    color: #002B36;
+  }
+  .asian {
+    background-color: #fff;
+    color: #002B36;
+  }
+  .european {
+    background-color: #00323F;
+    color: #F8F8F8;
+  }
+  
+  /* CARDS LAYOUT */
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 300px;          
+    height: 320px;          
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s;
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+  }
+  .card-text {
+    padding: 16px;
+    display: flex;
+    flex-grow: 1;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+    color: inherit;
+  }
+  .card:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .intro-image, .intro-text {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    .cards-container {
+      justify-content: space-around;
+    }
+    .card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
