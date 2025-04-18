@@ -3,40 +3,212 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Wisk Takers</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Kay+Pho+Du&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project1style.css">
+
     <link rel="stylesheet" href="project1style.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Kay+Pho+Du&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
   </head>
   <body>
+  <!-- Navigation -->
+  <nav class="main-nav d-flex align-items-center justify-content-between p-3">
+    <div class="nav-logo">
+      <img src="images/Whisk Takers.png" alt="Whisk Takers Logo" height="60">
+    </div>
+    <ul class="nav-menu list-unstyled d-flex mb-0">
+      <li class="ms-4"><a href="#Home" class="text-decoration-none text-dark">Home</a></li>
+      <li class="ms-4"><a href="#featured" class="text-decoration-none text-dark"> Featured Recipes</a></li>
+      <li class="ms-4"><a href="#our-story" class="text-decoration-none text-dark">Our Story</a></li>
+    </ul>
+  </nav>
 
-    <header>
-        <nav class="main-nav d-flex align-items-center justify-content-between p-3">
-          <div class="nav-logo">
-            <img src="images/wisk.svg" alt="Whisk Takers Logo" height="50">
+      <!-- Hero Section -->
+<section class="hero vh-75">
+    <div class="text-center hero-content">
+      <h1 class="display-4 fw-bold mb-3">Whisk<br>Takers™</h1>
+      <p class="lead">Fearless flavor, one recipe at a time.</p>
+      <a href="#featured" class="btn btn-primary">Start Stirring</a>
+    </div>
+  </section>
+
+      <!-- Recipe Cards Section -->
+<section class="recipe-section py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">Featured Recipes</h2>
+      <div class="row g-4">
+        <!-- Recipe Card 1 -->
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img src="images/Canva-Meat-mofongo-Puerto-Rico-Edited-by-me.jpg" alt="Rainbow Cookies" class="recipe-image">
+            <div class="recipe-content">
+              <div class="recipe-header">
+                <h3 class="recipe-title">Meat Mofongo</h3>
+                <div class="cook-time">
+                  <span class="time-icon">⏱</span>
+                  30 min
+                </div>
+              </div>
+              <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div class="recipe-rating">
+                <div class="hearts">
+                  <span class="heart-filled">❤️</span>
+                  <span class="heart-filled">❤️</span>
+                  <span class="heart-filled">❤️</span>
+                  <span class="heart-half">❤️</span>
+                  <span class="heart-empty">🤍</span>
+                </div>
+                <span class="rating-number">3.5</span>
+                <a href="#" class="reviews-link">(23 reviews)</a>
+              </div>
+            </div>
           </div>
-          <ul class="nav-menu list-unstyled d-flex mb-0">
-            <li class="ms-4"><a href="#featured" class="text-decoration-none text-dark">Recipes</a></li>
-            <li class="ms-4"><a href="#about" class="text-decoration-none text-dark">About</a></li>
-            <li class="ms-4"><a href="#contact" class="text-decoration-none text-dark">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
-       <!-- Hero Section -->
-       <section id="hero" class="position-relative text-center text-white">
-        <img src="images/victoria-shes-cMrLNX24eI0-unsplash.jpg" alt="Delicious dishes on display" class="img-fluid w-100">
-        <div class="hero-content position-absolute top-50 start-50 translate-middle">
-          <h1 class="display-4 fw-bold">Whisk Takers</h1>
-          <p class="lead">Take a whisk. Make it bold.</p>
-          <a href="#featured" class="btn btn-danger btn-lg mt-3">Start Stirring</a>
         </div>
-      </section>
+  
+          <!-- Recipe Card 2 -->
+        <div class="col-md-4">
+            <div class="recipe-card">
+              <img src="images/luisa-brimble-HvXEbkcXjSk-unsplash.jpg" alt="Table full of seasonal food items" class="recipe-image">
+              <div class="recipe-content">
+                <div class="recipe-header">
+                  <h3 class="recipe-title">Holiday Dinner</h3>
+                  <div class="cook-time">
+                    <span class="time-icon">⏱</span>
+                    1.5 hrs
+                  </div>
+                </div>
+                <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="recipe-rating">
+                  <div class="hearts">
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-empty">🤍</span>
+                  </div>
+                  <span class="rating-number">4.0</span>
+                  <a href="#" class="reviews-link">(110 reviews)</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+         <!-- Recipe Card 3 -->
+         <div class="col-md-4">
+            <div class="recipe-card">
+              <img src="images/max-griss-otLqpb9LK70-unsplash.jpg" alt="bowl of noodle soup" class="recipe-image">
+              <div class="recipe-content">
+                <div class="recipe-header">
+                  <h3 class="recipe-title">Khao Soi</h3>
+                  <div class="cook-time">
+                    <span class="time-icon">⏱</span>
+                    45 min
+                  </div>
+                </div>
+                <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="recipe-rating">
+                  <div class="hearts">
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-filled">❤️</span>
+                    <span class="heart-half">❤️</span>
+                    <span class="heart-filled">❤️</span>
+                  </div>
+                  <span class="rating-number">5</span>
+                  <a href="#" class="reviews-link">(135 reviews)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</section>
 
-
+         <!-- Our Story Section -->
+<section class="our-story-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="section-title mb-4">Our Story</h2>
+          <p class="story-text mb-4">
+            At Whisk Takers, we don't do boring. We're here to make your favorite recipes with a little beautiful chaos in the kitchen.
+          </p>
+          <p class="story-text mb-4">
+            Recipes? They're suggestions. Rules? Please to be bent. We believe the best meals come from getting creative, adding a twist and having fun along the way.
+          </p>
+          <p class="story-text">
+            So grab your whisk, turn up the heat, and let's cook something legendary — your way.
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="images/shamblen-studios-BV8Ka-JE0Cs-unsplash.jpg" alt="Colorful Ice Cream Cone" class="story-image">
+        </div>
+      </div>
+    </div>
+  </section>
+      </div>
+    </div>
+  </section>
+      
+    <!-- Footer -->
+<footer class="footer py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Logo and Description -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="images/backgroundless.png" alt="Whisk Takers™" class="footer-logo mb-3" height="60">
+          <p class="footer-text">Fearless flavor, one recipe at a time. Join us in creating something legendary.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#featured">Recipes</a></li>
+            <li><a href="#our-story">Our Story</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact/Social -->
+        <div class="col-md-4">
+          <h3 class="footer-title">Connect With Us</h3>
+          <div class="social-links mb-3">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <p class="footer-text">Subscribe to our newsletter for recipes and updates!</p>
+          <form class="footer-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-bottom text-center mt-4 pt-4 border-top">
+        <p class="mb-0">© 2025 Whisk Takers™. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
     
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>
