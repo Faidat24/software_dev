@@ -1,107 +1,161 @@
+/* Root Variables */
 :root {
-    --primarycolor: #2B6066;
-    --primarylightcolor: rgb(180, 240, 170);
-    --secondarycolor: rgb(220, 50, 50);
-    --text-color: #02433d;
+    --primary-teal: #02433d;
+    --secondary-lighter-teal: #3F7386;
+    --hero-blue: #7FDBDA;
+    --hero-pink: #FFC0CB;
+    --text-dark: #333333;
+    --footer-bg: #3F7287;
+    --light-cream: #FBF3EC;
 }
 
+/* Base Styles */
 body {
-    font-family: 'Kay Pho Du', serif;
-    color: var(--text-color);
-    overflow-x: hidden;
+    font-family: 'Urbanist', sans-serif;
+    color: var(--text-dark);
 }
 
-h1 {
-    font-family: 'Kavoon', cursive;
-    color: var(--text-color);
+/* Announcement Banner */
+.announcement-banner {
+    background-color: var(--footer-bg);
 }
 
-.lead {
-    color: var(--text-color);
-    font-size: 16px;
+.announcement-text {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--light-cream);
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
-.main-nav {
-    background-color: white;
+.carousel-inner {
+    padding: 0.75rem 0;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--light-cream);
+    padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    margin-bottom: 0 !important;
 }
 
-.hero {
-    margin-top: 76px;
-    height: 500px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+.navbar-toggler {
+    border-color: var(--primary-teal);
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(2, 67, 61, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+    font-family: 'Kavoon', cursive;
+    font-weight: 500;
+    color: var(--primary-teal);
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--secondary-lighter-teal);
+}
+
+.nav-link.active {
+    color: var(--secondary-lighter-teal);
+    font-weight: 600;
+}
+
+/* Hero Section */
 .hero {
-    height: 60vh; /* Adjust this value to your preferred height */
-    background-image: url('images/heather-ford-Fq54FqucgCE-unsplash.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+    background: url('images/heather-ford-Fq54FqucgCE-unsplash.jpg') center/cover no-repeat;
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 76px; 
-}
-
-/* Add a dark overlay to make text more readable */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    margin-top: 0 !important;
 }
 
 .hero-content {
-    position: relative; 
-    z-index: 1;
-    color: white; 
-    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Style the lead text */
-.hero .lead {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+.brand-name {
+    font-family: 'Agbalumo', cursive;
+    font-size: 4.5rem;
+    color: var(--primary-teal);
+    line-height: 1;
 }
 
-/* Style the button */
-.hero .btn {
+.trademark {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1rem;
+    color: #2F6B6B;
+    vertical-align: super;
+    position: relative;
+    top: -20px;
+    margin-left: -5px;
     display: inline-block;
-    padding: 10px 30px;
-    min-width: 150px;
-    font-size: 1.1rem;
-    background-color: blue;
+}
+
+.tagline {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5rem;
+    color: #2F6B6B;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--primary-teal);
+    color: var(--light-cream);
     border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 60px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.hero .btn:hover {
-    background-color: rgb(83, 73, 172);
-    color: white;
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #036b61;
+    color: var(--light-cream);
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.ms-4{
-    font-family: 'Kavoon', cursive;
+/* Recipe Cards */
+.recipes-section {
+    padding: 5rem 0;
+    background-color: var(--light-cream);
 }
+
+.section-title {
+    font-family: 'Agbalumo', cursive;
+    color: var(--primary-teal);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .recipe-card {
-    width: 300px;
     background: white;
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
 .recipe-card:hover {
@@ -118,113 +172,456 @@ h1 {
     padding: 1.5rem;
 }
 
-.recipe-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
 .recipe-title {
-    color: #2C5282;
+    font-family: 'Agbalumo', cursive;
+    color: var(--primary-teal);
     font-size: 1.5rem;
-    margin: 0;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .cook-time {
-    color: #4A5568;
+    color: #666;
+    font-family: 'Urbanist', sans-serif;
     font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.time-icon {
-    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .recipe-description {
-    color: #4A5568;
+    font-family: 'Urbanist', sans-serif;
+    color: #555;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+/* Breakfast Banner */
+.breakfast-banner {
+    background-color: #FFDDC2;
+    background-image: url('images/Eggs.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.banner-content {
+    max-width: 50%;
+    padding-left: 2rem;
+}
+
+.banner-title {
+    font-family: 'Agbalumo', cursive;
+    color: var(--primary-teal);
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.banner-subtitle {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+/* Cookbook Promo */
+.cookbook-promo {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.book-image {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+}
+
+.promo-content {
+    padding-left: 3rem;
+}
+
+.promo-label {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+}
+
+.promo-title {
+    font-family: 'Agbalumo', cursive;
+    color: var(--primary-teal);
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.promo-subtitle {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.2rem;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('images/air-bubbles-of-cola-soda-drink-or-beer-texture-free-vector.jpg') center/cover fixed;
+    padding: 6rem 0;
+    position: relative;
+    color: white;
+    min-height: 600px;
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.testimonial-content {
+    text-align: center;
+    padding:  1rem 2rem;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.testimonial-logo {
+    height: 120px; 
+    margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+    font-family: 'Agbalumo', cursive;
+    line-height: 1.4;
+    margin: 1rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color:#FBF3EC;
+}
+
+.testimonial-author {
+    font-family: 'Urbanist', sans-serif;
+    margin-top: 1rem;
+    color: #FBF3EC;
+    font-weight: normal;
+}
+
+.sound-off {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5rem;
+    color: #FBF3EC;
+}
+
+/* Carousel Controls */
+.carousel-indicators {
+    bottom: -3rem;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.carousel-indicators button.active {
+    background-color: white;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Story Section */
+.story-section {
+    background-color: #FDF797;
+    padding: 5rem 0;
+}
+
+.story-text {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary-teal);
+}
+
+/* Team Section */
+.team-section {
+    background-color: #FBF3EC;
+    padding: 5rem 0;
+}
+
+.team-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.section-title {
+    font-family: 'Agbalumo', cursive;
+    color: #02433d;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.team-text {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    color: #02433d;
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #D4EDDF;
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-family: 'Agbalumo', cursive;
+    color: #02433d;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.mission-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mission-item.alternate {
+    flex-direction: row-reverse !important;
+}
+
+.mission-text {
+    flex: 1;
+    padding: 2rem;
+}
+
+.mission-title {
+    font-family: 'Urbanist', sans-serif;
+    color: #02433d;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.mission-description {
+    font-family: 'Urbanist', sans-serif;
+    color: #02433d;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.mission-image {
+    flex: 1;
+    border: 2px solid #02433d;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mission-item,
+    .mission-item.alternate {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .mission-text,
+    .mission-image {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/* Recipes Section */
+.recipes-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.section-title {
+    font-family: 'Agbalumo', cursive;
+    color: #02433d;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: 'Urbanist', sans-serif;
+    color: #02433d;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 1.5rem;
+}
+
+.recipe-title {
+    font-family: 'Urbanist', sans-serif;
+    color: #02433d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.recipe-description {
+    font-family: 'Urbanist', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.recipe-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .recipe-rating {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
-.hearts {
+.stars {
+    color: #FFD700;
+}
+
+.rating-value {
+    color: #02433d;
+    font-weight: 600;
+}
+
+.review-count {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.recipe-time {
     display: flex;
-    gap: 2px;
+    align-items: center;
+    gap: 0.5rem;
+    color: #02433d;
 }
 
-.heart-filled, .heart-empty, .heart-half {
-    font-size: 1.1rem;
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.rating-number {
-    color: #4A5568;
-    font-weight: 600;
-    font-size: 0.9rem;
+@media (max-width: 576px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
 }
-
-.reviews-link {
-    color: #4299E1;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.reviews-link:hover {
-    text-decoration: underline;
-}
-.our-story-section {
-    background-color: #FDF797; 
-    padding: 5rem 0;
-}
-
-.our-story-section .section-title {
-    color: #2C5282;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.story-text {
-    color: #2C5282;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 90%;
-}
-
-.story-image {
-    max-width: 80%;
-    height: auto;
-}
+/* Footer */
 .footer {
-    background-color: #FADCC4;
-    color: #02433d; 
+    background-color: var(--footer-bg);
+    color: var(--light-cream);
+    padding: 4rem 0 2rem;
 }
 
 .footer-logo {
     max-height: 60px;
     width: auto;
+    margin-bottom: 1.5rem;
 }
 
 .footer-title {
     font-family: 'Kavoon', cursive;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: #02433d; 
+    color: var(--light-cream);
 }
 
-.footer-text {
-    color: #02433d; 
-    font-size: 0.95rem;
-    line-height: 1.6;
+.footer-text,
+.footer-links a,
+.social-link,
+.footer-bottom p {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--light-cream);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
 }
 
 .footer-links li {
@@ -232,13 +629,14 @@ h1 {
 }
 
 .footer-links a {
-    color: #02433d; 
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: #036b61; 
+.footer-links a:hover,
+.footer-links a:focus {
+    opacity: 0.8;
+    color: var(--light-cream);
 }
 
 .social-links {
@@ -247,63 +645,134 @@ h1 {
 }
 
 .social-link {
-    color: #02433d; /* Changed to dark green */
     font-size: 1.5rem;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
     opacity: 0.7;
+    color: var(--light-cream);
 }
 
 .footer-form .form-control {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #02433d;
-    color: #02433d;
+    background-color: var(--light-cream);
+    border: 1px solid var(--primary-teal);
+    color: var(--primary-teal);
+    font-family: 'Urbanist', sans-serif;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
 }
 
 .footer-form .form-control::placeholder {
-    color: rgba(2, 67, 61, 0.6); 
+    color: rgba(2, 67, 61, 0.6);
 }
 
 .footer-form .btn {
-    background-color: #02433d;
-    color: white;
+    background-color: var(--primary-teal);
+    color: var(--light-cream);
     border: none;
+    font-family: 'Urbanist', sans-serif;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.footer-form .btn:hover {
+.footer-form .btn:hover,
+.footer-form .btn:focus {
     background-color: #036b61;
 }
 
 .footer-bottom {
-    color: #02433d; 
-    font-size: 0.9rem;
-    border-top-color: rgba(2, 67, 61, 0.2); 
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(251, 243, 236, 0.2);
+    text-align: center;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .our-story-section {
+    .brand-name {
+        font-size: 3rem;
+    }
+    }
+    
+    .trademark {
+        font-size: 0.35rem;
+        top: -15px;
+    }
+    
+    .tagline {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .story-section,
+    .team-section,
+    .mission-section,
+    .cookbook-promo {
         padding: 3rem 0;
     }
-    
-    .story-text {
+
+    .story-text,
+    .banner-content {
         max-width: 100%;
     }
-    
+
     .story-image {
         max-width: 60%;
         margin-top: 2rem;
     }
-}
 
-@media (max-width: 768px) {
     .hero {
         margin-top: 60px;
     }
-    
+
     .hero .row {
         min-height: calc(100vh - 60px);
+    }
+
+    .promo-content {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .book-image {
+        max-width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .promo-title {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-section {
+        padding: 4rem 0;
+    }
+
+    .testimonial-quote {
+        font-size: 1.8rem;
+    }
+@media (max-width: 768px) {
+    .team-photo {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-name {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.5rem;
     }
 }
