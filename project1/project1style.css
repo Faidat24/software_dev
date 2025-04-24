@@ -1,778 +1,1114 @@
 /* Root Variables */
 :root {
-    --primary-teal: #02433d;
-    --secondary-lighter-teal: #3F7386;
-    --hero-blue: #7FDBDA;
-    --hero-pink: #FFC0CB;
-    --text-dark: #333333;
-    --footer-bg: #3F7287;
-    --light-cream: #FBF3EC;
+   --primary-teal: #02433d;
+   --secondary-lighter-teal: #3F7386;
+   --hero-blue: #7FDBDA;
+   --hero-pink: #FFC0CB;
+   --text-dark: #333333;
+   --footer-bg: #3F7287;
+   --light-cream: #FBF3EC;
 }
 
 /* Base Styles */
 body {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--text-dark);
+   font-family: 'Urbanist', sans-serif;
+   color: var(--text-dark);
+}
+
+a, button, 
+.nav-link,
+.navbar-toggler,
+.view-more-btn,
+.social-link,
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators button,
+.footer-links a,
+.strand-link {
+   cursor: pointer;
 }
 
 /* Announcement Banner */
 .announcement-banner {
-    background-color: var(--footer-bg);
+   background-color: var(--footer-bg);
 }
 
 .announcement-text {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--light-cream);
-    font-size: 1.25rem;
-    font-weight: 600;
+   font-family: 'Urbanist', sans-serif;
+   color: var(--light-cream);
+   font-size: 1.25rem;
+   font-weight: 600;
 }
 
 .carousel-inner {
-    padding: 0.75rem 0;
+   padding: 0.75rem 0;
 }
 
 /* Navigation */
 .navbar {
-    background-color: var(--light-cream);
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 0 !important;
+   background-color: var(--light-cream);
+   padding: 1rem 0;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   margin-bottom: 0 !important;
 }
 
 .navbar-toggler {
-    border-color: var(--primary-teal);
+   border-color: var(--primary-teal);
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(2, 67, 61, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(2, 67, 61, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .nav-link {
-    font-family: 'Kavoon', cursive;
-    font-weight: 500;
-    color: var(--primary-teal);
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
+   font-family: 'Agbalumo', cursive;
+   font-weight: 500;
+   color: var(--primary-teal);
+   transition: all 0.3s ease;
+   padding: 0.5rem 1rem;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--secondary-lighter-teal);
+   color: var(--secondary-lighter-teal);
 }
 
 .nav-link.active {
-    color: var(--secondary-lighter-teal);
-    font-weight: 600;
+   color: var(--secondary-lighter-teal);
+   font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+   .navbar-collapse {
+       position: absolute;
+       top: 100%;
+       right: 0;
+       padding: 1rem;
+       background-color: var(--light-cream);
+       width: 200px;
+       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+       z-index: 1000;
+   }
+
+   .navbar .container {
+       position: relative;
+   }
+
+   .nav-item {
+       text-align: right;
+   }
 }
 
 /* Hero Section */
 .hero {
-    background: url('images/heather-ford-Fq54FqucgCE-unsplash.jpg') center/cover no-repeat;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    margin-top: 0 !important;
+   background: url('images/heather-ford-Fq54FqucgCE-unsplash.jpg') center/cover no-repeat;
+   min-height: 80vh;
+   display: flex;
+   align-items: center;
+   padding: 2rem;
+   margin-top: 0 !important;
 }
 
 .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 2rem;
 }
 
 .brand-name {
-    font-family: 'Agbalumo', cursive;
-    font-size: 4.5rem;
-    color: var(--primary-teal);
-    line-height: 1;
+   font-family: 'Agbalumo', cursive;
+   font-size: 4.5rem;
+   color: var(--primary-teal);
+   line-height: 1;
 }
 
-.trademark {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1rem;
-    color: #2F6B6B;
-    vertical-align: super;
-    position: relative;
-    top: -20px;
-    margin-left: -5px;
-    display: inline-block;
+.hero .trademark {
+   font-family: 'Urbanist', sans-serif;
+   font-size: 1.2rem;
+   color: #2F6B6B;
+   vertical-align: super;
+   position: relative;
+   top: -20px;
+   margin-left: -5px;
+   display: inline-block;
+   font-weight: 600;
 }
 
 .tagline {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.5rem;
-    color: #2F6B6B;
-    margin: 2rem 0;
-}
-
-.cta-button {
-    font-family: 'Urbanist', sans-serif;
-    background-color: var(--primary-teal);
-    color: var(--light-cream);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 60px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover,
-.cta-button:focus {
-    background-color: #036b61;
-    color: var(--light-cream);
-    outline: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+   font-family: 'Urbanist', sans-serif;
+   font-size: 1.5rem;
+   color: #2F6B6B;
+   margin: 2rem 0;
 }
 
 /* Recipe Cards */
 .recipes-section {
-    padding: 5rem 0;
-    background-color: var(--light-cream);
+   padding: 5rem 0;
+   background-color: var(--light-cream);
 }
 
 .section-title {
-    font-family: 'Agbalumo', cursive;
-    color: var(--primary-teal);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+   font-family: 'Agbalumo', cursive;
+   color: var(--primary-teal);
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   text-align: center;
 }
 
 .section-subtitle {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--primary-teal);
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    text-align: center;
+   font-family: 'Urbanist', sans-serif;
+   color: var(--primary-teal);
+   font-size: 1.2rem;
+   margin-bottom: 3rem;
+   text-align: center;
 }
 
 .recipe-card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    height: 100%;
-    transition: transform 0.3s ease;
+   background: white;
+   border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   height: 100%;
+   transition: transform 0.3s ease;
 }
 
 .recipe-card:hover {
-    transform: translateY(-5px);
+   transform: translateY(-5px);
 }
 
 .recipe-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
 }
 
 .recipe-content {
-    padding: 1.5rem;
+   padding: 1.5rem;
 }
 
 .recipe-title {
-    font-family: 'Agbalumo', cursive;
-    color: var(--primary-teal);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+   font-family: 'Agbalumo', cursive;
+   color: var(--primary-teal);
+   font-size: 1.5rem;
+   margin-bottom: 0.5rem;
 }
 
 .cook-time {
-    color: #666;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+   color: #666;
+   font-family: 'Urbanist', sans-serif;
+   font-size: 0.9rem;
+   margin-bottom: 1rem;
 }
 
 .recipe-description {
-    font-family: 'Urbanist', sans-serif;
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.5;
+   font-family: 'Urbanist', sans-serif;
+   color: #555;
+   font-size: 0.95rem;
+   line-height: 1.5;
 }
+
+.recipe-meta {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-family: 'Urbanist', sans-serif;
+   margin-top: 1rem;
+}
+
+.recipe-rating {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.recipe-time {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   color: #02433d;
+   font-family: 'Urbanist', sans-serif;
+   font-size: 0.9rem;
+}
+
+.time-icon {
+   font-size: 1rem;
+}
+
+.stars {
+   color: #FFD700;
+}
+
+.rating-value {
+   color: #02433d;
+   font-weight: 600;
+}
+
+.review-count {
+   color: #666;
+   font-size: 0.8rem;
+}
+
 /* Breakfast Banner */
 .breakfast-banner {
-    background-color: #FFDDC2;
-    background-image: url('images/Eggs.png');
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
-    min-height: 400px;
+   background-color: #FFDDC2;
+   background-image: url('images/Eggs.png');
+   background-position: right center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   padding: 4rem 0;
+   position: relative;
+   overflow: hidden;
+   min-height: 400px;
 }
 
 .banner-content {
-    max-width: 50%;
-    padding-left: 2rem;
+   max-width: 50%;
+   padding-left: 2rem;
 }
 
 .banner-title {
-    font-family: 'Agbalumo', cursive;
-    color: var(--primary-teal);
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
+   font-family: 'Agbalumo', cursive;
+   color: var(--primary-teal);
+   font-size: 3.5rem;
+   line-height: 1.2;
+   margin-bottom: 1.5rem;
 }
 
 .banner-subtitle {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--primary-teal);
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 80%;
+   font-family: 'Urbanist', sans-serif;
+   color: var(--primary-teal);
+   font-size: 1.2rem;
+   line-height: 1.5;
+   max-width: 80%;
+}
+
+/* Breakfast banner button styling */
+.breakfast-banner .view-more-btn {
+   background-color: var(--primary-teal);
+   color: var(--light-cream);
+   font-size: 1.1rem;
+   padding: 0.75rem 2rem;
+   max-width: 200px;
+   margin: 0;
+   display: inline-block;
 }
 
 /* Cookbook Promo */
 .cookbook-promo {
-    padding: 3rem 0;
-    background-color: white;
+   padding: 3rem 0;
+   background-color: white;
 }
 
 .book-image {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
+   position: relative;
+   max-width: 400px;
+   margin: 0 auto;
 }
 
 .book-image img {
-    width: 100%;
-    height: auto;
+   width: 100%;
+   height: auto;
 }
 
 .promo-content {
-    padding-left: 3rem;
+   padding-left: 3rem;
 }
 
 .promo-label {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--primary-teal);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+   font-family: 'Urbanist', sans-serif;
+   color: var(--primary-teal);
+   font-size: 1.2rem;
+   margin-bottom: 1rem;
 }
 
 .promo-title {
-    font-family: 'Agbalumo', cursive;
-    color: var(--primary-teal);
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
+   font-family: 'Fredoka One', cursive;
+   color: var(--primary-teal);
+   font-size: 3.5rem;
+   margin-bottom: 0.5rem;
+   line-height: 1.2;
 }
 
 .promo-subtitle {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--primary-teal);
-    font-size: 1.2rem;
+   font-family: 'Urbanist', sans-serif;
+   color: var(--primary-teal);
+   font-size: 1.2rem;
+}
+
+/* Strand Books link styling */
+.strand-link {
+   color: var(--primary-teal);
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.strand-link:hover {
+   color: #036b61;
+   text-decoration: none;
 }
 
 /* Testimonial Section */
 .testimonial-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('images/air-bubbles-of-cola-soda-drink-or-beer-texture-free-vector.jpg') center/cover fixed;
-    padding: 6rem 0;
-    position: relative;
-    color: white;
-    min-height: 600px;
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+               url('images/air-bubbles-of-cola-soda-drink-or-beer-texture-free-vector.jpg') center/cover fixed;
+   padding: 6rem 0;
+   position: relative;
+   color: white;
+   min-height: 600px;
 }
 
 .testimonial-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 2rem;
+   text-align: center;
 }
 
 .testimonial-content {
-    text-align: center;
-    padding:  1rem 2rem;
-    min-height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   text-align: center;
+   padding: 1rem 2rem;
+   min-height: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 0.5rem;
 }
+
 .testimonial-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 0.25rem;
 }
 
 .testimonial-logo {
-    height: 120px; 
-    margin-bottom: 1rem;
+   height: 120px; 
+   margin-bottom: 0.1rem;
 }
 
 .testimonial-quote {
-    font-family: 'Agbalumo', cursive;
-    line-height: 1.4;
-    margin: 1rem 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color:#FBF3EC;
+   font-family: 'Agbalumo', cursive;
+   line-height: 1.4;
+   margin: 1rem 0;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   color: #FBF3EC;
 }
 
 .testimonial-author {
-    font-family: 'Urbanist', sans-serif;
-    margin-top: 1rem;
-    color: #FBF3EC;
-    font-weight: normal;
-}
-
-.sound-off {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.5rem;
-    color: #FBF3EC;
+   font-family: 'Urbanist', sans-serif;
+   margin-top: 1rem;
+   color: #FBF3EC;
+   font-weight: normal;
 }
 
 /* Carousel Controls */
 .carousel-indicators {
-    bottom: -3rem;
+   bottom: -3rem;
 }
 
 .carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 8px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   margin: 0 8px;
+   background-color: rgba(255, 255, 255, 0.5);
+   border: none;
 }
 
 .carousel-indicators button.active {
-    background-color: white;
+   background-color: white;
 }
 
 .carousel-item {
-    transition: transform 0.6s ease-in-out;
+   transition: transform 0.6s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+   width: 10%;
+   opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+   width: 3rem;
+   height: 3rem;
 }
 
 /* Story Section */
 .story-section {
-    background-color: #FDF797;
-    padding: 5rem 0;
+   background-color: #FDF797;
+   padding: 5rem 0;
 }
 
 .story-text {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.2rem;
-    color: var(--primary-teal);
+   font-family: 'Urbanist', sans-serif;
+   font-size: 1.2rem;
+   color: var(--primary-teal);
 }
 
 /* Team Section */
 .team-section {
-    background-color: #FBF3EC;
-    padding: 5rem 0;
+   background-color: #FBF3EC;
+   padding: 5rem 0;
 }
 
 .team-photo img {
-    width: 100%;
-    height: auto;
+   width: 100%;
+   height: auto;
 }
 
 .section-title {
-    font-family: 'Agbalumo', cursive;
-    color: #02433d;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: left;
+   font-family: 'Agbalumo', cursive;
+   color: #02433d;
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   text-align: left;
 }
 
 .team-text {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.2rem;
-    color: #02433d;
+   font-family: 'Urbanist', sans-serif;
+   font-size: 1.2rem;
+   color: #02433d;
 }
 
 /* Mission Section */
 .mission-section {
-    background-color: #D4EDDF;
-    padding: 5rem 0;
+   background-color: #D4EDDF;
+   padding: 5rem 0;
 }
 
 .section-title {
-    font-family: 'Agbalumo', cursive;
-    color: #02433d;
-    font-size: 3rem;
-    margin-bottom: 4rem;
-    text-align: center;
+   font-family: 'Agbalumo', cursive;
+   color: #02433d;
+   font-size: 3rem;
+   margin-bottom: 4rem;
+   text-align: center;
 }
 
 .mission-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 .mission-item {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+   display: flex;
+   align-items: center;
+   gap: 3rem;
 }
 
 .mission-item.alternate {
-    flex-direction: row-reverse !important;
+   flex-direction: row-reverse !important;
 }
 
 .mission-text {
-    flex: 1;
-    padding: 2rem;
+   flex: 1;
+   padding: 2rem 0;
 }
 
 .mission-title {
-    font-family: 'Urbanist', sans-serif;
-    color: #02433d;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+   font-family: 'Urbanist', sans-serif;
+   color: #02433d;
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+   font-weight: 600;
 }
 
 .mission-description {
-    font-family: 'Urbanist', sans-serif;
-    color: #02433d;
-    font-size: 1.2rem;
-    line-height: 1.5;
+   font-family: 'Urbanist', sans-serif;
+   color: #02433d;
+   font-size: 1.2rem;
+   line-height: 1.5;
+   text-align: left;
 }
 
 .mission-image {
-    flex: 1;
-    border: 2px solid #02433d;
-    padding: 0.5rem;
-    background-color: white;
+   flex: 1;
+   padding: 0.5rem;
+   background-color: white;
 }
 
 .mission-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+   width: 100%;
+   height: auto;
+   display: block;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .mission-item,
-    .mission-item.alternate {
-        flex-direction: column !important;
-        text-align: center;
-        gap: 2rem;
-    }
+   .mission-item,
+   .mission-item.alternate {
+       flex-direction: column !important;
+       text-align: center;
+       gap: 2rem;
+   }
 
-    .mission-text,
-    .mission-image {
-        width: 100%;
-    }
+   .mission-text,
+   .mission-image {
+       width: 100%;
+   }
 
-    .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
-    }
+   .section-title {
+       font-size: 2.5rem;
+       margin-bottom: 3rem;
+   }
 }
 /* Recipes Section */
 .recipes-section {
-    padding: 5rem 0;
-    background-color: #fff;
+   padding: 5rem 0;
+   background-color: #fff;
 }
 
 .section-title {
-    font-family: 'Agbalumo', cursive;
-    color: #02433d;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
+   font-family: 'Agbalumo', cursive;
+   color: #02433d;
+   font-size: 3rem;
+   margin-bottom: 1rem;
+   text-align: center;
 }
 
 .section-subtitle {
-    font-family: 'Urbanist', sans-serif;
-    color: #02433d;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    text-align: center;
+   font-family: 'Urbanist', sans-serif;
+   color: #02433d;
+   font-size: 1.2rem;
+   margin-bottom: 3rem;
+   text-align: center;
 }
 
 .recipe-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 .recipe-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    background: white;
+   border: 1px solid #e0e0e0;
+   border-radius: 8px;
+   overflow: hidden;
+   transition: transform 0.3s ease;
+   background: white;
 }
 
 .recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   transform: translateY(-5px);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
 }
 
 .recipe-content {
-    padding: 1.5rem;
+   padding: 1.5rem;
 }
 
 .recipe-title {
-    font-family: 'Urbanist', sans-serif;
-    color: #02433d;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+   font-family: 'Urbanist', sans-serif;
+   color: #02433d;
+   font-size: 1.5rem;
+   margin-bottom: 0.5rem;
+   font-weight: 600;
 }
 
 .recipe-description {
-    font-family: 'Urbanist', sans-serif;
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+   font-family: 'Urbanist', sans-serif;
+   color: #666;
+   font-size: 0.9rem;
+   margin-bottom: 1rem;
+   line-height: 1.5;
 }
 
 .recipe-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Urbanist', sans-serif;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-family: 'Urbanist', sans-serif;
+   margin-top: 1rem;
 }
 
 .recipe-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.stars {
-    color: #FFD700;
-}
-
-.rating-value {
-    color: #02433d;
-    font-weight: 600;
-}
-
-.review-count {
-    color: #666;
-    font-size: 0.8rem;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
 }
 
 .recipe-time {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #02433d;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   color: #02433d;
+   font-family: 'Urbanist', sans-serif;
+   font-size: 0.9rem;
+}
+
+.time-icon {
+   font-size: 1rem;
+}
+
+.stars {
+   color: #FFD700;
+}
+
+.rating-value {
+   color: #02433d;
+   font-weight: 600;
+}
+
+.review-count {
+   color: #666;
+   font-size: 0.8rem;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-    .recipe-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   .recipe-grid {
+       grid-template-columns: repeat(2, 1fr);
+   }
 }
 
 @media (max-width: 576px) {
-    .recipe-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-title {
-        font-size: 2.5rem;
-    }
+   .recipe-grid {
+       grid-template-columns: 1fr;
+   }
+   
+   .section-title {
+       font-size: 2.5rem;
+   }
 }
 /* Footer */
 .footer {
-    background-color: var(--footer-bg);
-    color: var(--light-cream);
-    padding: 4rem 0 2rem;
+   background-color: var(--footer-bg);
+   color: var(--light-cream);
+   padding: 4rem 0 2rem;
 }
 
 .footer-logo {
-    max-height: 60px;
-    width: auto;
-    margin-bottom: 1.5rem;
+   max-height: 60px;
+   width: auto;
+   margin-bottom: 1.5rem;
+}
+
+.footer-trademark {
+   font-size: 0.6rem;
+   vertical-align: super;
+   position: relative;
+   top: -8px;
+   margin-left: -2px;
+   display: inline-block;
 }
 
 .footer-title {
-    font-family: 'Kavoon', cursive;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--light-cream);
+   font-family: 'Agbalumo', cursive;
+   font-size: 1.5rem;
+   margin-bottom: 1.5rem;
+   color: var(--light-cream);
 }
 
 .footer-text,
 .footer-links a,
 .social-link,
 .footer-bottom p {
-    font-family: 'Urbanist', sans-serif;
-    color: var(--light-cream);
+   font-family: 'Urbanist', sans-serif;
+   color: var(--light-cream);
 }
 
 .footer-links {
-    list-style: none;
-    padding: 0;
+   list-style: none;
+   padding: 0;
 }
 
 .footer-links li {
-    margin-bottom: 0.75rem;
+   margin-bottom: 0.75rem;
 }
 
 .footer-links a {
-    text-decoration: none;
-    transition: all 0.3s ease;
+   text-decoration: none;
+   transition: all 0.3s ease;
 }
 
 .footer-links a:hover,
 .footer-links a:focus {
-    opacity: 0.8;
-    color: var(--light-cream);
+   opacity: 0.8;
+   color: var(--light-cream);
 }
 
 .social-links {
-    display: flex;
-    gap: 1rem;
+   display: flex;
+   gap: 1rem;
 }
 
 .social-link {
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+   font-size: 1.5rem;
+   transition: all 0.3s ease;
 }
 
 .social-link:hover,
 .social-link:focus {
-    opacity: 0.7;
-    color: var(--light-cream);
+   opacity: 0.7;
+   color: var(--light-cream);
 }
 
 .footer-form .form-control {
-    background-color: var(--light-cream);
-    border: 1px solid var(--primary-teal);
-    color: var(--primary-teal);
-    font-family: 'Urbanist', sans-serif;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
+   background-color: var(--light-cream);
+   border: 1px solid var(--primary-teal);
+   color: var(--primary-teal);
+   font-family: 'Urbanist', sans-serif;
+   border-radius: 4px;
+   padding: 0.5rem 1rem;
 }
 
 .footer-form .form-control::placeholder {
-    color: rgba(2, 67, 61, 0.6);
+   color: rgba(2, 67, 61, 0.6);
 }
 
 .footer-form .btn {
-    background-color: var(--primary-teal);
-    color: var(--light-cream);
-    border: none;
-    font-family: 'Urbanist', sans-serif;
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+   background-color: var(--primary-teal);
+   color: var(--light-cream);
+   border: none;
+   font-family: 'Urbanist', sans-serif;
+   padding: 0.5rem 1.5rem;
+   border-radius: 4px;
+   transition: all 0.3s ease;
 }
 
 .footer-form .btn:hover,
 .footer-form .btn:focus {
-    background-color: #036b61;
+   background-color: #036b61;
 }
 
 .footer-bottom {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(251, 243, 236, 0.2);
-    text-align: center;
+   margin-top: 3rem;
+   padding-top: 2rem;
+   border-top: 1px solid rgba(251, 243, 236, 0.2);
+   text-align: center;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .brand-name {
-        font-size: 3rem;
-    }
-    }
-    
-    .trademark {
-        font-size: 0.35rem;
-        top: -15px;
-    }
-    
-    .tagline {
-        font-size: 1.25rem;
-    }
+   .brand-name {
+       font-size: 3rem;
+   }
+   }
+   
+   .trademark {
+       font-size: 0.35rem;
+       top: -15px;
+   }
+   
+   .tagline {
+       font-size: 1.25rem;
+   }
 
-    .section-title {
-        font-size: 2.5rem;
-    }
+   .section-title {
+       font-size: 2.5rem;
+   }
 
-    .story-section,
-    .team-section,
-    .mission-section,
-    .cookbook-promo {
-        padding: 3rem 0;
-    }
+   .story-section,
+   .team-section,
+   .mission-section,
+   .cookbook-promo {
+       padding: 3rem 0;
+   }
 
-    .story-text,
-    .banner-content {
-        max-width: 100%;
-    }
+   .story-text,
+   .banner-content {
+       max-width: 100%;
+   }
 
-    .story-image {
-        max-width: 60%;
-        margin-top: 2rem;
-    }
+   .story-image {
+       max-width: 60%;
+       margin-top: 2rem;
+   }
 
-    .hero {
-        margin-top: 60px;
-    }
+   .hero {
+       margin-top: 60px;
+   }
 
-    .hero .row {
-        min-height: calc(100vh - 60px);
-    }
+   .hero .row {
+       min-height: calc(100vh - 60px);
+   }
 
-    .promo-content {
-        padding-left: 0;
-        text-align: center;
-        margin-top: 2rem;
-    }
+   .promo-content {
+       padding-left: 0;
+       text-align: center;
+       margin-top: 2rem;
+   }
 
-    .book-image {
-        max-width: 80%;
-        margin-bottom: 2rem;
-    }
+   .book-image {
+       max-width: 80%;
+       margin-bottom: 2rem;
+   }
 
-    .promo-title {
-        font-size: 2.5rem;
-    }
+   .promo-title {
+       font-size: 2.5rem;
+   }
 
-    .testimonial-section {
-        padding: 4rem 0;
-    }
+   .testimonial-section {
+       padding: 4rem 0;
+   }
 
-    .testimonial-quote {
-        font-size: 1.8rem;
-    }
+   .testimonial-quote {
+       font-size: 1.8rem;
+   }
 @media (max-width: 768px) {
-    .team-photo {
-        margin-bottom: 2rem;
-    }
+   .team-photo {
+       margin-bottom: 2rem;
+   }
 }
 
 @media (max-width: 576px) {
-    .brand-name {
-        font-size: 2.5rem;
-    }
+   .brand-name {
+       font-size: 2.5rem;
+   }
 
-    .section-title {
-        font-size: 2rem;
-    }
+   .section-title {
+       font-size: 2rem;
+   }
 
-    .testimonial-text {
-        font-size: 1.5rem;
+   .testimonial-text {
+       font-size: 1.5rem;
+   }
+}
+
+/* View More Button */
+.view-more-btn {
+   background-color: var(--primary-teal);
+   color: var(--light-cream);
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 600;
+   padding: 0.75rem 2rem;
+   border-radius: 60px;
+   transition: all 0.3s ease;
+   border: none;
+   font-size: 1.1rem;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   text-decoration: none;
+   display: inline-block;
+}
+
+.view-more-btn:hover {
+   background-color: #036b61;
+   color: var(--light-cream);
+   transform: translateY(-2px);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+   text-decoration: none;
+}
+
+.hero .view-more-btn {
+   font-size: 1.3rem;
+   padding: 0.75rem 2rem;
+   max-width: 200px;
+   margin: 0;
+   display: inline-block;
+}
+
+/* Recipe Hero Section */
+.recipe-hero {
+   margin-bottom: 2rem;
+}
+
+.hero-image {
+   position: relative;
+   height: 600px;
+   overflow: hidden;
+}
+
+.hero-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.hero-image::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+   z-index: 1;
+}
+
+.hero-image .hero-content {
+   position: absolute;
+   bottom: 50%;
+   left: 0;
+   width: 100%;
+   padding: 2rem;
+   z-index: 2;
+   color: white;
+   transform: translateY(50%);
+   margin-left: 2rem;
+}
+
+.recipe-hero .recipe-title {
+   font-family: 'Agbalumo', cursive;
+   color: white;
+   font-size: 2.5rem;
+   margin-bottom: 0;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nutrition-facts-label {
+   background-color: white;
+   border: 2px solid #02433d;
+   border-radius: 6px;
+   padding: 15px;
+   max-width: 300px;
+   margin: 0 auto;
+   font-family: 'Urbanist', sans-serif;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+   animation: fadeInUp 0.8s ease-out forwards;
+   opacity: 0;
+}
+
+.nutrition-title {
+   font-family: 'Fredoka One', cursive;
+   font-size: 2rem;
+   text-align: center;
+   margin-bottom: 5px;
+   color: #02433d;
+   letter-spacing: -0.5px;
+   line-height: 1.2;
+   text-transform: uppercase;
+}
+
+.nutrition-tm {
+   font-family: 'Urbanist', sans-serif;
+   font-size: 0.8rem;
+   vertical-align: super;
+   position: relative;
+   top: -5px;
+   margin-left: 2px;
+}
+
+.nutrition-subtitle {
+   font-size: 1.8rem;
+   font-weight: 900;
+   text-align: center;
+   margin: 0;
+   color: #02433d;
+   letter-spacing: -0.5px;
+   line-height: 1.2;
+   text-transform: uppercase;
+}
+
+.serving-size {
+   font-family: 'Urbanist', sans-serif;
+   font-size: 1rem;
+   margin-bottom: 10px;
+   color: #02433d;
+   font-weight: 700;
+   border-bottom: 8px solid #02433d;
+   padding-bottom: 5px;
+}
+
+.divider {
+   border-top: 1px solid #02433d;
+   margin: 10px 0;
+}
+
+.nutrition-table {
+   margin-bottom: 15px;
+   width: 100%;
+}
+
+.nutrition-table td {
+   padding: 8px 0;
+   border-bottom: 1px solid #02433d;
+   font-size: 1.1rem;
+   font-family: 'Urbanist', sans-serif;
+}
+
+.nutrient-name {
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 900;
+   color: #02433d;
+   letter-spacing: 0.5px;
+}
+
+.nutrient-value {
+   font-family: 'Urbanist', sans-serif;
+   text-align: right;
+   font-weight: 900;
+   color: #02433d;
+}
+
+.nutrition-disclaimer {
+   font-family: 'Urbanist', sans-serif;
+   font-size: 0.7rem;
+   color: #02433d;
+   text-align: left;
+   font-style: italic;
+   line-height: 1.3;
+   margin-top: 15px;
+   padding-left: 5px;
+   border-top: 8px solid #02433d;
+   padding-top: 15px;
+}
+
+.ingredients-section {
+   margin-bottom: 4rem;
+   padding-bottom: 2rem;
+   position: relative;
+}
+
+.ingredients-section::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: -30px;
+   right: -30px;
+   height: 4px;
+   background-color: #FFC0CB;
+   border-radius: 2px;
+}
+
+.step {
+   margin-bottom: 1.5rem;
+   font-size: 0.95rem;
+   font-weight: 500;
+}
+
+.step h3 {
+   color: #02433d;
+   font-weight: 600;
+   font-size: 0.8rem;
+}
+
+.step p {
+   color: #333333;
+}
+
+.ingredients-section h2,
+.directions-section h2 {
+   font-weight: 700;
+   color: #02433d;
+}
+
+.directions-section h2 {
+   margin-bottom: 2rem;
 }

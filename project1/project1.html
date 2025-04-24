@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="project1style.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -61,7 +62,7 @@
                             <div>Takers<span class="trademark">™</span></div>
                             </h1>
                     <h4 class="tagline">Fearless flavor, one recipe at a time.</h4>
-                    <button class="btn cta-button btn-lg mt-4">Start Stirring</button>
+                    <a href="#cookbook-promo" class="btn view-more-btn btn-lg mt-4">Start Stirring</a>
                 </div>
             </div>
         </section>
@@ -83,7 +84,7 @@
                             <span class="time-icon">⏱</span>
                             30 min
                         </div>
-                        <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="recipe-description">Smash, stack, and savor. This Puerto Rican classic layers garlicky mashed plantains with juicy chunks of seasoned meat that soak up every drop of flavor. It's the kind of dish that doesn't whisper comfort—it shouts it.</p>
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@
                             <span class="time-icon">⏱</span>
                             1.5 hrs
                         </div>
-                        <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="recipe-description">Forget the rules. We're serving celebration on a platter. Think golden mains, rich sides, and unapologetically bold flavor combos. It's not just dinner—it's your new holiday tradition in the making.</p>
                     </div>
                 </div>
             </div>
@@ -113,10 +114,15 @@
                             <span class="time-icon">⏱</span>
                             45 min
                         </div>
-                        <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="recipe-description">Northern Thai soul in a bowl. Creamy coconut curry broth meets tender noodles and crispy toppings for a slurp-worthy symphony of spice. One bite and you'll be hooked—don't say we didn't warn you.</p>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- View More Button -->
+        <div class="text-center mt-5">
+            <a href="recipes.html" class="btn view-more-btn">View More Recipes</a>
         </div>
     </div>
 </section>
@@ -131,8 +137,9 @@
                 Start Here
             </h2>
             <p class="banner-subtitle">
-                Dig into breakfast recipes that wake up your taste buds
+                Dig into breakfast recipes that wake up your taste buds.
             </p>
+            <a href="eggs.html" class="btn view-more-btn mt-3">Let's Get Crackin'</a>
         </div>
     </div>
 </section>
@@ -144,9 +151,7 @@
             <!-- Title Section -->
             <div class="testimonial-header">
                 <img src="images/All White Logo.png" alt="Whisk Takers Logo" class="testimonial-logo">
-                <span class="sound-off">Community Board</span>
             </div>
-            <!-- Remove the extra closing div that was here -->
             
             <div class="carousel-inner">
                 <!-- First Testimonial -->
@@ -212,19 +217,19 @@
 </section>
 
 <!-- Cookbook Promo Section -->
-<section class="cookbook-promo">
+<section class="cookbook-promo" id="cookbook-promo">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="book-image">
-                    <img src="images/Book.png" alt="Whisk Takers Cookbook" class="img-fluid">
+                    <img src="images/Book Cover.png" alt="Whisk Takers Cookbook" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="promo-content">
                     <p class="promo-label">Fresh Flavor Drop</p>
                     <h2 class="promo-title">Get 10% Off</h2>
-                    <p class="promo-subtitle">when you preorder</p>
+                    <p class="promo-subtitle">when you preorder from <a href="https://www.strandbooks.com" class="strand-link">Strand Books</a></p>
                 </div>
             </div>
         </div>
@@ -237,7 +242,9 @@
       <div class="row g-4">
         <!-- Logo and Description -->
         <div class="col-md-4 mb-4 mb-md-0">
-          <img src="images/inverse.png" alt="Whisk Takers™" class="footer-logo mb-3" height="60">
+          <a href="project1.html">
+            <img src="images/inverse.png" alt="Whisk Takers™" class="footer-logo mb-3" height="60">
+          </a>
           <p class="footer-text">Fearless flavor, one recipe at a time. Join us in creating something legendary.</p>
         </div>
   
@@ -272,7 +279,7 @@
   
       <!-- Copyright -->
       <div class="footer-bottom text-center mt-4 pt-4">
-        <p class="mb-0">© 2025 Whisk Takers™. All rights reserved.</p>
+        <p class="mb-0">© 2025 Whisk Takers<span class="footer-trademark">™</span>. All rights reserved.</p>
       </div>
     </div>
   </footer>
